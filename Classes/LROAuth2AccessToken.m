@@ -55,7 +55,7 @@
 
 - (void)extractExpiresAtFromResponse
 {
-  NSTimeInterval expiresIn = (NSTimeInterval)[[self.authResponseData objectForKey:@"expires_in"] intValue];
+  NSTimeInterval expiresIn = (NSTimeInterval)[[self.authResponseData objectForKey:@"expires_in"] doubleValue];
   expiresAt = [[NSDate alloc] initWithTimeIntervalSinceNow:expiresIn];
 }
 
